@@ -1,4 +1,4 @@
-package view.component;
+package view.component.gameBoard;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

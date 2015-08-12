@@ -22,4 +22,8 @@ public class Constant {
     public static String MENU_ITEM_RULES = "Rules";
     public static String MENU_ITEM_ABOUT_PROGRAM = "About program";
     
+    //Messages
+     public static String START_MESSAGE = "You can start play game";
+     public static String COORDINATES_MESSAGE = "Computer played on coordinate: ";
+    
 }
