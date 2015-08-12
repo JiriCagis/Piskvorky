@@ -22,27 +22,28 @@ public class HelpDialog extends JDialog implements ActionListener {
     //Constnant
     private final Dimension dimension = new Dimension(200, 400);
 
-    public HelpDialog(String header, String content) {      
+    public HelpDialog(String header, String content) {        
         setSize(dimension);
         setMaximumSize(dimension);
         setResizable(false);
-        setLayout(new BorderLayout());
         setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
         setBackground(Color.white);
+        setTitle(header);
 
         headerLabel = new JLabel(header);
         headerLabel.setFont(new Font("SansSerif", Font.ITALIC, 20));
         headerLabel.setForeground(Color.BLUE);
-        this.add(headerLabel);
+        this.add(headerLabel,BorderLayout.NORTH);
 
         contentTextArea = new JTextArea(content);
         contentTextArea.setLineWrap(true);
         contentTextArea.setWrapStyleWord(true);
-        this.add(contentTextArea);
+        this.add(contentTextArea,BorderLayout.CENTER);
 
         okButton = new JButton(Constant.OK_BUTTON_LABEL);
         okButton.addActionListener(this);
-        this.add(okButton);
+        this.add(okButton,BorderLayout.SOUTH);
     }
 
     @Override

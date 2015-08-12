@@ -2,10 +2,13 @@ package view.component;
 
 import data.Constant;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
+import view.HelpDialog;
 
 public class GameMenu extends JMenuBar {
 
@@ -60,7 +63,14 @@ public class GameMenu extends JMenuBar {
     }
 
     private void registerListeners() {
+        controlItem.addActionListener(new ActionListener() {
 
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                HelpDialog helpDialog = new HelpDialog("Control game", "lkfjlsdajflasdj");
+                helpDialog.setVisible(true);
+            }
+        });
     }
 
 }
