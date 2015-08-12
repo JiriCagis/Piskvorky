@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class InfoPanel extends JPanel{
-    private JLabel messageLabel;
+    private final JLabel messageLabel;
 
     public InfoPanel() {
         setBackground(Color.GRAY);
@@ -16,7 +16,5 @@ public class InfoPanel extends JPanel{
     public void showMessage(String message){
         messageLabel.setText(message);
     }
-    
-    
-    
+        
 }
