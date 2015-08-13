@@ -37,6 +37,8 @@ public class MainWindow extends JFrame implements MainWindowListener, GameBoadLi
         this.add(gameMenu, BorderLayout.NORTH);
         this.add(gameBoard, BorderLayout.CENTER);
         this.add(infoPanel, BorderLayout.SOUTH);
+        
+        setTheme(Theme.DARK);
 
     }
 
@@ -69,6 +71,21 @@ public class MainWindow extends JFrame implements MainWindowListener, GameBoadLi
                         Constant.FESTIVAL_THEME_BACKGROUND_COLOR);
                 break;
         }
+    }
+
+    @Override
+    public void newGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void moveBack() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void closeWindow() {
+        System.exit(0);
     }
 
 }

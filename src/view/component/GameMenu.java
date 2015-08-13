@@ -28,12 +28,12 @@ public class GameMenu extends JMenuBar {
     private final JMenuItem controlItem;
     private final JMenuItem rulesItem;
     private final JMenuItem aboutProgramItem;
-    
+
     private final MainWindowListener mainWindowListener;
 
-    public GameMenu(int width, int height,MainWindowListener mainWindowListener) {
+    public GameMenu(int width, int height, MainWindowListener mainWindowListener) {
         this.setPreferredSize(new Dimension(width, height));
-        
+
         gameMenu = new JMenu(Constant.MENU_GAME);
         newGameItem = new JMenuItem(Constant.MENU_ITEM_NEW_GAME);
         moveBackItem = new JMenuItem(Constant.MENU_ITEM_MOVE_BACK);
@@ -61,14 +61,38 @@ public class GameMenu extends JMenuBar {
         helpMenu.add(rulesItem);
         helpMenu.add(aboutProgramItem);
         this.add(helpMenu);
-        
+
         this.mainWindowListener = mainWindowListener;
         registerMenuListeners();
 
     }
 
     private void registerMenuListeners() {
-        
+        //game menu
+        newGameItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                mainWindowListener.newGame();
+            }
+        });
+
+        moveBackItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                mainWindowListener.moveBack();
+            }
+        });
+
+        exitItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                mainWindowListener.closeWindow();
+            }
+        });
+
         //themes
         darkItem.addActionListener(new ActionListener() {
 
@@ -77,7 +101,7 @@ public class GameMenu extends JMenuBar {
                 mainWindowListener.setTheme(Theme.DARK);
             }
         });
-        
+
         brightItem.addActionListener(new ActionListener() {
 
             @Override
@@ -85,7 +109,7 @@ public class GameMenu extends JMenuBar {
                 mainWindowListener.setTheme(Theme.BRIGHT);
             }
         });
-         
+
         festivalItem.addActionListener(new ActionListener() {
 
             @Override
@@ -93,7 +117,7 @@ public class GameMenu extends JMenuBar {
                 mainWindowListener.setTheme(Theme.FESTIVAL);
             }
         });
-        
+
         //helps
         controlItem.addActionListener(new ActionListener() {
 
@@ -103,7 +127,7 @@ public class GameMenu extends JMenuBar {
                 helpDialog.setVisible(true);
             }
         });
-        
+
         rulesItem.addActionListener(new ActionListener() {
 
             @Override
@@ -112,7 +136,7 @@ public class GameMenu extends JMenuBar {
                 helpDialog.setVisible(true);
             }
         });
-        
+
         aboutProgramItem.addActionListener(new ActionListener() {
 
             @Override
