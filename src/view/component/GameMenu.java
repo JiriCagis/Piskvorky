@@ -10,7 +10,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 import view.HelpDialog;
 import view.MainWindowListener;
-import view.Theme;
+import data.Theme;
 
 public class GameMenu extends JMenuBar {
 

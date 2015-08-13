@@ -1,5 +1,6 @@
 package view;
 
+import data.Theme;
 import data.Constant;
 import java.awt.BorderLayout;
 import java.awt.Color;

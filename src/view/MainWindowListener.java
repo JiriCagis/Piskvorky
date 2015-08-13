@@ -1,5 +1,7 @@
 package view;
 
+import data.Theme;
+
 public interface MainWindowListener {
     void newGame();
     void moveBack();   
