@@ -9,6 +9,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 import view.HelpDialog;
+import view.MainWindowListener;
+import view.Theme;
 
 public class GameMenu extends JMenuBar {
 
@@ -26,8 +28,10 @@ public class GameMenu extends JMenuBar {
     private final JMenuItem controlItem;
     private final JMenuItem rulesItem;
     private final JMenuItem aboutProgramItem;
+    
+    private final MainWindowListener mainWindowListener;
 
-    public GameMenu(int width, int height) {
+    public GameMenu(int width, int height,MainWindowListener mainWindowListener) {
         this.setPreferredSize(new Dimension(width, height));
         
         gameMenu = new JMenu(Constant.MENU_GAME);
@@ -58,11 +62,39 @@ public class GameMenu extends JMenuBar {
         helpMenu.add(aboutProgramItem);
         this.add(helpMenu);
         
-        registerListeners();
+        this.mainWindowListener = mainWindowListener;
+        registerMenuListeners();
 
     }
 
-    private void registerListeners() {
+    private void registerMenuListeners() {
+        
+        //themes
+        darkItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                mainWindowListener.setTheme(Theme.DARK);
+            }
+        });
+        
+        brightItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                mainWindowListener.setTheme(Theme.BRIGHT);
+            }
+        });
+         
+        festivalItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                mainWindowListener.setTheme(Theme.FESTIVAL);
+            }
+        });
+        
+        //helps
         controlItem.addActionListener(new ActionListener() {
 
             @Override

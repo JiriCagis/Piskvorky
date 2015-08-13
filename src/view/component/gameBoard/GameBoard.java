@@ -139,6 +139,7 @@ public class GameBoard extends JPanel {
         this.color_player2 = player2;
         this.color_grid = grid;
         this.background = backgroud;
+        repaint();
     }
        
 }

@@ -1,5 +1,7 @@
 package data;
 
+import java.awt.Color;
+
 public class Constant {
 
     //General
@@ -33,6 +35,22 @@ public class Constant {
     public static final String HELP_RULES_HEADER = "Game rules";
     public static final String HELP_RULES_CONTENT = "Piskvorky(english tic tac toe) are strategic game. In game rivals two players on grid game board. Players switch with draw cross or barrow. You draw cross and computer draw barrow. Win player that as first create continously series of five symbols.";
     public static final String HELP_ABOUT_PROGRAM_HEADER = "About program";
-    public static final String HELP_ABOUT_PROGRAM_CONTENT= "This is strategic game for free time. I programmed application in language Java, for topic or prompts contact me on email: jiricaga30@gmail.com. Created in August 2015.";
+    public static final String HELP_ABOUT_PROGRAM_CONTENT = "This is strategic game for free time. I programmed application in language Java, for topic or prompts contact me on email: jiricaga30@gmail.com. Created in August 2015.";
+
+    //Themes
+    public static final Color DARK_THEME_BACKGROUND_COLOR = Color.DARK_GRAY;
+    public static final Color DARK_THEME_GRID_COLOR = Color.GRAY;
+    public static final Color DARK_THEME_CROSS_COLOR = Color.GREEN;
+    public static final Color DARK_THEME_BARROW_COLOR = Color.RED;
+
+    public static final Color BRIGHT_THEME_BACKGROUND_COLOR = Color.WHITE;
+    public static final Color BRIGHT_THEME_GRID_COLOR = Color.GRAY;
+    public static final Color BRIGHT_THEME_CROSS_COLOR = Color.BLUE;
+    public static final Color BRIGHT_THEME_BARROW_COLOR = Color.RED;
+
+    public static final Color FESTIVAL_THEME_BACKGROUND_COLOR = Color.ORANGE;
+    public static final Color FESTIVAL_THEME_GRID_COLOR = Color.YELLOW;
+    public static final Color FESTIVAL_THEME_CROSS_COLOR = Color.GRAY;
+    public static final Color FESTIVAL_THEME_BARROW_COLOR = Color.WHITE;
 
 }
