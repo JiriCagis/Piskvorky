@@ -67,7 +67,25 @@ public class GameMenu extends JMenuBar {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-                HelpDialog helpDialog = new HelpDialog("Control game", "lkfjlsdajflasdj");
+                HelpDialog helpDialog = new HelpDialog(Constant.HELP_CONTROL_HEADER, Constant.HELP_CONTROL_CONTENT);
+                helpDialog.setVisible(true);
+            }
+        });
+        
+        rulesItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                HelpDialog helpDialog = new HelpDialog(Constant.HELP_RULES_HEADER, Constant.HELP_RULES_CONTENT);
+                helpDialog.setVisible(true);
+            }
+        });
+        
+        aboutProgramItem.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                HelpDialog helpDialog = new HelpDialog(Constant.HELP_ABOUT_PROGRAM_HEADER, Constant.HELP_ABOUT_PROGRAM_CONTENT);
                 helpDialog.setVisible(true);
             }
         });

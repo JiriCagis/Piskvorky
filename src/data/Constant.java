@@ -1,7 +1,5 @@
 package data;
 
-import javax.swing.Icon;
-
 public class Constant {
 
     //General
@@ -30,8 +28,11 @@ public class Constant {
     public static final String COORDINATES_MESSAGE = "Computer played on coordinate: ";
 
     //Helps
-//    public static final String COORDINATES_MESSAGE = "Computer played on coordinate: ";
-//    public static final String COORDINATES_MESSAGE = "Computer played on coordinate: ";
-//    public static final String COORDINATES_MESSAGE = "Computer played on coordinate: ";
+    public static final String HELP_CONTROL_HEADER = "Control";
+    public static final String HELP_CONTROL_CONTENT = "Program is control mouse or touchpad. You can click left button mouse on correspond place in game for move. If you move bad, you can return move back. Choose move back find in menu Game. Have fun.";
+    public static final String HELP_RULES_HEADER = "Game rules";
+    public static final String HELP_RULES_CONTENT = "Piskvorky(english tic tac toe) are strategic game. In game rivals two players on grid game board. Players switch with draw cross or barrow. You draw cross and computer draw barrow. Win player that as first create continously series of five symbols.";
+    public static final String HELP_ABOUT_PROGRAM_HEADER = "About program";
+    public static final String HELP_ABOUT_PROGRAM_CONTENT= "This is strategic game for free time. I programmed application in language Java, for topic or prompts contact me on email: jiricaga30@gmail.com. Created in August 2015.";
 
 }
