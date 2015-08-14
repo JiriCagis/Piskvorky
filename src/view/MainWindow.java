@@ -1,11 +1,13 @@
 package view;
 
+import logic.Piskvorky;
 import data.Theme;
 import data.Constant;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import logic.PiskvorkyImpl;
 import view.component.gameBoard.GameBoadListener;
 import view.component.gameBoard.GameBoard;
 import view.component.GameMenu;
@@ -13,10 +15,16 @@ import view.component.InfoPanel;
 
 public class MainWindow extends JFrame implements MainWindowListener, GameBoadListener {
 
+    //gui components
     private final GameMenu gameMenu;
     private final GameBoard gameBoard;
     private final InfoPanel infoPanel;
-    private int array[][];
+
+    //Logic
+    private final int COUNT_ROWS = 25;
+    private final int COUNT_COLUMNS = 20;
+    private final Piskvorky piskvorky;
+    
 
     public MainWindow() {
         setTitle(Constant.APP_NAME + " " + Constant.APP_VERSION);
@@ -28,9 +36,10 @@ public class MainWindow extends JFrame implements MainWindowListener, GameBoadLi
         setLocationRelativeTo(null);
         setResizable(true);
 
-        array = new int[25][20];
+        piskvorky = new PiskvorkyImpl(COUNT_ROWS, COUNT_COLUMNS);
+
         gameMenu = new GameMenu(getWidth(), 20, this);
-        gameBoard = new GameBoard(25, 20);
+        gameBoard = new GameBoard(COUNT_ROWS, COUNT_COLUMNS);
         gameBoard.setListener(this);
         infoPanel = new InfoPanel();
         infoPanel.showMessage(Constant.START_MESSAGE);
@@ -38,18 +47,51 @@ public class MainWindow extends JFrame implements MainWindowListener, GameBoadLi
         this.add(gameMenu, BorderLayout.NORTH);
         this.add(gameBoard, BorderLayout.CENTER);
         this.add(infoPanel, BorderLayout.SOUTH);
-        
-        setTheme(Theme.DARK);
 
+        setTheme(Theme.DARK);
     }
 
     @Override
     public void clickOnBoard(int row, int column) {
-        array[row][column] = GameBoard.PLAYER_2;
-        gameBoard.setArray(array);
+        if (piskvorky.play(row, column)) {
+            gameBoard.setArray(piskvorky.getActualState());
+
+            if (piskvorky.winPlayer()) {
+                JOptionPane.showMessageDialog(new JFrame(),Constant.WIN_GAME_MESSAGE,Constant.END_GAME_HEADER, JOptionPane.WARNING_MESSAGE);
+                piskvorky.newGame();
+                gameBoard.setArray(piskvorky.getActualState());
+                return;
+            }
+            
+            piskvorky.playComputer();
+            if(piskvorky.winComputer()){
+                JOptionPane.showMessageDialog(new JFrame(),Constant.LOSE_GAME_MESSAGE,Constant.END_GAME_HEADER, JOptionPane.WARNING_MESSAGE);
+                piskvorky.newGame();
+                gameBoard.setArray(piskvorky.getActualState());
+                return;
+            }
+        }
+
         infoPanel.showMessage(Constant.COORDINATES_MESSAGE + row + ":" + column);
     }
 
+    @Override
+    public void newGame() {
+        piskvorky.newGame();
+        gameBoard.repaint();
+    }
+
+    @Override
+    public void moveBack() {
+        piskvorky.moveBack();
+        gameBoard.repaint();
+    }
+
+    @Override
+    public void closeWindow() {
+        System.exit(0);
+    }
+    
     @Override
     public void setTheme(Theme theme) {
         switch (theme) {
@@ -73,20 +115,4 @@ public class MainWindow extends JFrame implements MainWindowListener, GameBoadLi
                 break;
         }
     }
-
-    @Override
-    public void newGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void moveBack() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void closeWindow() {
-        System.exit(0);
-    }
-
 }

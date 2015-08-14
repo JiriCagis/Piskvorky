@@ -8,6 +8,9 @@ public class Constant {
     public static final String APP_NAME = "Piskvorky";
     public static final String APP_VERSION = "1.2";
     public static final String OK_BUTTON_LABEL = "O.K.";
+    public static final String END_GAME_HEADER = "End game";
+    public static final String WIN_GAME_MESSAGE = "Congratulation, you win :)";
+    public static final String LOSE_GAME_MESSAGE = "You loss game, try it again.";
 
     //Game menu
     public static final String MENU_GAME = "Game";
@@ -27,7 +30,7 @@ public class Constant {
 
     //Messages
     public static final String START_MESSAGE = "You can start play game";
-    public static final String COORDINATES_MESSAGE = "Computer played on coordinate: ";
+    public static final String COORDINATES_MESSAGE = "You played on coordinate: ";
 
     //Helps
     public static final String HELP_CONTROL_HEADER = "Control";
