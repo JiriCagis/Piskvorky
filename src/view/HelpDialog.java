@@ -39,6 +39,7 @@ public class HelpDialog extends JDialog implements ActionListener {
         contentTextArea = new JTextArea(content);
         contentTextArea.setLineWrap(true);
         contentTextArea.setWrapStyleWord(true);
+        contentTextArea.setEditable(false);
         this.add(contentTextArea,BorderLayout.CENTER);
 
         okButton = new JButton(Constant.OK_BUTTON_LABEL);

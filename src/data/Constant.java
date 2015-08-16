@@ -38,7 +38,7 @@ public class Constant {
     public static final String HELP_RULES_HEADER = "Game rules";
     public static final String HELP_RULES_CONTENT = "Piskvorky(english tic tac toe) are strategic game. In game rivals two players on grid game board. Players switch with draw cross or barrow. You draw cross and computer draw barrow. Win player that as first create continously series of five symbols.";
     public static final String HELP_ABOUT_PROGRAM_HEADER = "About program";
-    public static final String HELP_ABOUT_PROGRAM_CONTENT = "This is strategic game for free time. I programmed application in language Java, for topic or prompts contact me on email: jiricaga30@gmail.com. Created in August 2015.";
+    public static final String HELP_ABOUT_PROGRAM_CONTENT = "This is strategic game for free time. I programmed application in language Java, for topic or prompts contact me on email: \n ->> jiricaga30@gmail.com.\n ->> Created in August 2015.";
 
     //Themes
     public static final Color DARK_THEME_BACKGROUND_COLOR = Color.DARK_GRAY;

@@ -120,7 +120,7 @@ public class GameBoard extends JPanel {
     public void setArray(int[][] array) {
         //check size array
         try{
-           // int  value = array[COUNT_ROWS][COUNT_COLUMNS]; //test approach to last item
+//            int  value = array[COUNT_ROWS-1][COUNT_COLUMNS-1]; //test approach to last item
         } catch(IndexOutOfBoundsException e){
             e.printStackTrace();
             return;

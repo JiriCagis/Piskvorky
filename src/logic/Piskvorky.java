@@ -8,4 +8,7 @@ public interface Piskvorky {
     boolean winPlayer();
     boolean winComputer();
     int[][] getActualState();
+    
+    void loadSavedGame();
+    void saveGame();
 }
