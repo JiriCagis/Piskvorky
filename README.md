@@ -18,8 +18,11 @@ blank field and save field with max value after calculate
 number according situation around blank space.
 
 <H3>Main function</H3>
-- Clock is dynamic change own size depend on resize window.
-- Application remember size and location window after close.
+- You can play against computer
+- When you confuse with click on boad, you can move back
+- Save game after close application and return game with again open application
+- Window is dynamic stretchable
+- Remember your favourite theme, position and size window
 
 <H3>Technologie</H3>
 - Programming language; Java 7
