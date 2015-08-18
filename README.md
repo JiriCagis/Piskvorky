@@ -28,4 +28,4 @@ number according situation around blank space.
 - Programming language; Java 7
 - Graphical interface: Swing, draw on Canvas
 - Persist data: XML format
-- unit testing: JUnit
+- Unit testing: JUnit
