@@ -1,20 +1,9 @@
-package logic.inteligence;
+package main.logic.inteligence;
 
 import java.awt.Point;
 
-/**
- * Intelligence for Czech game Piskvorky.
- * Calculate best move on base actually situation on grid.
- * Using algorithm Minimax. Algorithm calculate best move on
- * two parts, first get best move for defense and second get best
- * move for attack. When attack best have greater evaluate return
- * best move for attack else return best move for defense.
- * Best moves(attack and defense) are obtain passing all 
- * blank field and save field with max value after calculate
- * number according situation around blank space.
- * @author adminuser
- */
-public class Intelligence {
+
+public class IntelligenceImpl implements Intelligence{
     
     private Move bestMoveAttack;
     private Move bestMoveDefence;
@@ -25,7 +14,7 @@ public class Intelligence {
     private final int HUMAN_PLAYER;
     private final int BLANK_SPACE;
 
-    public Intelligence(int COUNT_ROWS, int COUNT_COLUMNS, int COMPUTER_PLAYER, int HUMAN_PLAYER, int BLANK_SPACE) {
+    public IntelligenceImpl(int COUNT_ROWS, int COUNT_COLUMNS, int COMPUTER_PLAYER, int HUMAN_PLAYER, int BLANK_SPACE) {
         this.COUNT_ROWS = COUNT_ROWS;
         this.COUNT_COLUMNS = COUNT_COLUMNS;
         this.COMPUTER_PLAYER = COMPUTER_PLAYER;
@@ -33,6 +22,7 @@ public class Intelligence {
         this.BLANK_SPACE = BLANK_SPACE;
     }
     
+    @Override
     public Point getBestMove(int array[][]){
         bestMoveDefence = evaluate(array,HUMAN_PLAYER);
         bestMoveAttack = evaluate(array,COMPUTER_PLAYER);

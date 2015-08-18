@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_51" class="java.beans.XMLDecoder">
+<java version="1.7.0_79" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <array class="[I" length="25">
@@ -19,10 +19,18 @@
      <array class="int" length="20"/>
     </void>
     <void index="5">
-     <array class="int" length="20"/>
+     <array class="int" length="20">
+      <void index="7">
+       <int>1</int>
+      </void>
+     </array>
     </void>
     <void index="6">
-     <array class="int" length="20"/>
+     <array class="int" length="20">
+      <void index="8">
+       <int>2</int>
+      </void>
+     </array>
     </void>
     <void index="7">
      <array class="int" length="20"/>
@@ -81,7 +89,44 @@
    </array>
   </void>
   <void method="add">
-   <object class="java.util.Stack"/>
+   <object class="java.util.Stack">
+    <void method="add">
+     <object class="java.awt.Point" id="Point0">
+      <void class="java.awt.Point" method="getField">
+       <string>x</string>
+       <void method="set">
+        <object idref="Point0"/>
+        <int>6</int>
+       </void>
+      </void>
+      <void class="java.awt.Point" method="getField">
+       <string>y</string>
+       <void method="set">
+        <object idref="Point0"/>
+        <int>8</int>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="java.awt.Point" id="Point1">
+      <void class="java.awt.Point" method="getField">
+       <string>x</string>
+       <void method="set">
+        <object idref="Point1"/>
+        <int>5</int>
+       </void>
+      </void>
+      <void class="java.awt.Point" method="getField">
+       <string>y</string>
+       <void method="set">
+        <object idref="Point1"/>
+        <int>7</int>
+       </void>
+      </void>
+     </object>
+    </void>
+   </object>
   </void>
  </object>
 </java>

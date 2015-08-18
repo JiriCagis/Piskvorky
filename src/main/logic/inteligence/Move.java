@@ -1,4 +1,4 @@
-package logic.inteligence;
+package main.logic.inteligence;
 
 import java.awt.Point;
 

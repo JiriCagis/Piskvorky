@@ -1,6 +1,6 @@
-package view;
+package main.view;
 
-import data.Theme;
+import main.data.Theme;
 
 public interface MainWindowListener {
     void newGame();

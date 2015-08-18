@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_51" class="java.beans.XMLDecoder">
+<java version="1.7.0_79" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="java.awt.Dimension" id="Dimension0">
@@ -7,14 +7,14 @@
      <string>width</string>
      <void method="set">
       <object idref="Dimension0"/>
-      <int>662</int>
+      <int>690</int>
      </void>
     </void>
     <void class="java.awt.Dimension" method="getField">
      <string>height</string>
      <void method="set">
       <object idref="Dimension0"/>
-      <int>633</int>
+      <int>696</int>
      </void>
     </void>
    </object>
@@ -25,21 +25,21 @@
      <string>x</string>
      <void method="set">
       <object idref="Point0"/>
-      <int>660</int>
+      <int>513</int>
      </void>
     </void>
     <void class="java.awt.Point" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point0"/>
-      <int>103</int>
+      <int>191</int>
      </void>
     </void>
    </object>
   </void>
   <void method="add">
    <object class="java.lang.Enum" method="valueOf">
-    <class>data.Theme</class>
+    <class>main.data.Theme</class>
     <string>BRIGHT</string>
    </object>
   </void>

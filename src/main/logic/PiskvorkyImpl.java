@@ -1,11 +1,11 @@
-package logic;
+package main.logic;
 
 import java.awt.Point;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-import logic.inteligence.Intelligence;
+import main.logic.inteligence.IntelligenceImpl;
 import utils.xmlParser.XmlParser;
 import utils.xmlParser.XmlParserImpl;
 
@@ -18,11 +18,7 @@ public class PiskvorkyImpl implements Piskvorky {
     private int[][] array;
     private Stack<Point> previousMoves;
 
-    private final int HUMAN_PLAYER = 2;
-    private final int COMPUTER_PLAYER = 1;
-    private final int WHITE_SPACE = 0;
-
-    private final Intelligence intelligence;
+    private final IntelligenceImpl intelligence;
     private final File outFile = new File("piskvorky_saved_game.xml");
     private final XmlParser<Object> xmlParser;
 
@@ -31,7 +27,7 @@ public class PiskvorkyImpl implements Piskvorky {
         this.COUNT_COLUMNS = columns;
         this.array = new int[rows][columns];
         previousMoves = new Stack<>();
-        intelligence = new Intelligence(COUNT_ROWS, COUNT_COLUMNS, COMPUTER_PLAYER, HUMAN_PLAYER, WHITE_SPACE);
+        intelligence = new IntelligenceImpl(COUNT_ROWS, COUNT_COLUMNS, COMPUTER_PLAYER, HUMAN_PLAYER, WHITE_SPACE);
         xmlParser = new XmlParserImpl<Object>();
         loadSavedGame();
     }
@@ -164,6 +160,11 @@ public class PiskvorkyImpl implements Piskvorky {
         list.add(array);
         list.add(previousMoves);
         xmlParser.save(list, outFile);
+    }
+
+    @Override
+    public boolean hasMoveBack() {
+        return !previousMoves.isEmpty();
     }
 
 }

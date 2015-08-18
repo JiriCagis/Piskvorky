@@ -1,6 +1,6 @@
-package view;
+package main.view;
 
-import data.Constant;
+import main.data.Constant;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;

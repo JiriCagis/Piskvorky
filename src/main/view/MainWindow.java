@@ -1,8 +1,8 @@
-package view;
+package main.view;
 
-import logic.Piskvorky;
-import data.Theme;
-import data.Constant;
+import main.logic.Piskvorky;
+import main.data.Theme;
+import main.data.Constant;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Point;
@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import logic.PiskvorkyImpl;
+import main.logic.PiskvorkyImpl;
 import utils.xmlParser.XmlParser;
 import utils.xmlParser.XmlParserImpl;
-import view.component.gameBoard.GameBoadListener;
-import view.component.gameBoard.GameBoard;
-import view.component.GameMenu;
-import view.component.InfoPanel;
+import main.view.component.gameBoard.GameBoadListener;
+import main.view.component.gameBoard.GameBoard;
+import main.view.component.GameMenu;
+import main.view.component.InfoPanel;
 
 public class MainWindow extends JFrame implements MainWindowListener, GameBoadListener {
 

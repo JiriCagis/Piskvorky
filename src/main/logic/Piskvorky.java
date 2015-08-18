@@ -1,4 +1,4 @@
-package logic;
+package main.logic;
 
 /**
  * Logic class game Piskvorky. Piskvorky is strategic game for two 
@@ -12,8 +12,14 @@ package logic;
  * @author adminuser
  */
 public interface Piskvorky {    
+    
+    public final int HUMAN_PLAYER = 2;
+    public final int COMPUTER_PLAYER = 1;
+    public final int WHITE_SPACE = 0;
+    
     void newGame();
     void moveBack();
+    boolean hasMoveBack();
     boolean play(int row,int column);
     void playComputer();
     boolean winPlayer();

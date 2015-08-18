@@ -1,4 +1,4 @@
-package view.component;
+package main.view.component;
 
 import java.awt.Color;
 import javax.swing.JLabel;

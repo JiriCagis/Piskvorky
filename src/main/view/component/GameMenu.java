@@ -1,6 +1,6 @@
-package view.component;
+package main.view.component;
 
-import data.Constant;
+import main.data.Constant;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,9 +8,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
-import view.HelpDialog;
-import view.MainWindowListener;
-import data.Theme;
+import main.view.HelpDialog;
+import main.view.MainWindowListener;
+import main.data.Theme;
 
 public class GameMenu extends JMenuBar {
 
