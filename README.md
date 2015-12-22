@@ -4,6 +4,8 @@ Players sparingly draw symbols on grid. Symbols are barrow and cross.
 Player which as first create series of five his symbols win game. Series can
 be vertical,horizontal or obliquely.
 
+<img src="https://github.com/JiriCagis/Piskvorky/blob/master/piskvorky_white.jpg"/>
+<img src="https://github.com/JiriCagis/Piskvorky/blob/master/piskvorky_dark.jpg"/>
 Official rules Czech game Piskorky:
 - http://www.piskvorky.cz/federace/oficialni-pravidla-piskvorek/
 
