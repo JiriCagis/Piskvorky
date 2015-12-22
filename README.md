@@ -5,8 +5,8 @@ Player which as first create series of five his symbols win game. Series can
 be vertical,horizontal or obliquely.
 
 <center>
-<img src="https://github.com/JiriCagis/Piskvorky/blob/master/piskvorky_white.jpg" height="400" width="400"/> 
-<img src="https://github.com/JiriCagis/Piskvorky/blob/master/piskvorky_dark.jpg"  height="400" width="400"/>
+<img src="https://github.com/JiriCagis/Piskvorky/blob/master/piskvorky_dark.jpg" height="400" width="400"/> ...
+<img src="https://github.com/JiriCagis/Piskvorky/blob/master/piskvorky_white.jpg"  height="400" width="400"/>
 </center>
 <br>
 Official rules Czech game Piskorky:
